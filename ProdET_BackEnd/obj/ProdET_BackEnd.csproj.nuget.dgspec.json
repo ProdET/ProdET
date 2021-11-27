@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\ProdEt\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj": {}
+    "C:\\Users\\ad226\\Documents\\dev\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Git\\ProdEt\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj": {
+    "C:\\Users\\ad226\\Documents\\dev\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\ProdEt\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\ad226\\Documents\\dev\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj",
         "projectName": "ProdET_BackEnd",
-        "projectPath": "C:\\Git\\ProdEt\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj",
-        "packagesPath": "C:\\Users\\391mi\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\ProdEt\\ProdET\\ProdET_BackEnd\\obj\\",
+        "projectPath": "C:\\Users\\ad226\\Documents\\dev\\ProdET\\ProdET_BackEnd\\ProdET_BackEnd.csproj",
+        "packagesPath": "C:\\Users\\ad226\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ad226\\Documents\\dev\\ProdET\\ProdET_BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\391mi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ad226\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
