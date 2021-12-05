@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ProdEtt_BackEnd": {
+    "ProdET_BackEnd": {
       "commandName": "Project",
       "launchUrl": "swagger",
       "environmentVariables": {

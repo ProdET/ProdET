@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ProductDBContext>(options =>
-options.UseSqlServer());
+  //options.UseInMemoryDatabase("ProductList"));  
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProdET_BackEnd.Models
 {
@@ -8,7 +9,7 @@ namespace ProdET_BackEnd.Models
         {
 
         }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; } = null!;
 
     }
 }

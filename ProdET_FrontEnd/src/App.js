@@ -10,6 +10,7 @@ export default class App extends Component {
 
     componentDidMount() {
         this.populateWeatherData();
+        this.populateProductData();
     }
 
     static renderForecastsTable(forecasts) {
@@ -53,6 +54,11 @@ export default class App extends Component {
 
     async populateWeatherData() {
         const response = await fetch('weatherforecast');
+        const data = await response.json();
+        this.setState({ forecasts: data, loading: false });
+    }
+    async populateProductData() {
+        const response = await fetch('product');
         const data = await response.json();
         this.setState({ forecasts: data, loading: false });
     }
