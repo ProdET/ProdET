@@ -1,6 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './App.css';
+import { store } from "./actions/store";
+import { Provider } from "react-redux";
+import Products from './components/Products'
 
-export default class App extends Component {
+function App(){
+    return (
+        <Provider store={store}>
+            <Products/>
+        </Provider>
+
+    );
+}
+
+export default App;
+
+/*export default class App extends Component {
     static displayName = App.name;
 
     constructor(props) {
@@ -62,4 +77,5 @@ export default class App extends Component {
         const data = await response.json();
         this.setState({ forecasts: data, loading: false });
     }
-}
+}*/
+
