@@ -1,5 +1,5 @@
 
-import { api } from "./api";
+import  api  from "./api";
 
 
 export const ACTION_TYPES = {
@@ -9,8 +9,8 @@ export const ACTION_TYPES = {
     FETCH_ALL:'FETCH_ALL'
 }
 
-export const fetchAll = () => dispatch =>{
-    api.product()
+export const fetchAll = () => dispatch => {
+    api.product().fetchAll()
     .then(
         response => {
             dispatch({
