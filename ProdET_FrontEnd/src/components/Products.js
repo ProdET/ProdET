@@ -1,3 +1,13 @@
+import {
+  Grid,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/product";
@@ -8,9 +18,41 @@ const Products = (props) => {
 
   useEffect(() => {
     props.fetchAllProducts();
-  }, []); //componentDidMount equivalent with hooks
+  }, [props]); //componentDidMount equivalent with hooks
 
-  return <div>from Products</div>;
+  //product grid
+  return (
+    <Paper>
+      <Grid container>
+        <Grid item>
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Product Name</TableCell>
+                  <TableCell>Price</TableCell>
+                  <TableCell>Emission Score</TableCell>
+                  <TableCell>EM Score/Price Ratio</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {props.productList.map((record, index) => {
+                  return (
+                    <TableRow key={index}>
+                      <TableCell>{record.ItemName}</TableCell>
+                      <TableCell>{record.Price}</TableCell>
+                      <TableCell>{record.BrandName}</TableCell>
+                      <TableCell>{record.Retailer}</TableCell>
+                    </TableRow>
+                  );
+                })}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Grid>
+      </Grid>
+    </Paper>
+  );
 };
 
 const mapStateToProps = (state) => {
