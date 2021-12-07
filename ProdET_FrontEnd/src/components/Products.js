@@ -18,7 +18,7 @@ const Products = (props) => {
 
   useEffect(() => {
     props.fetchAllProducts();
-  }, [props]); //componentDidMount equivalent with hooks
+  }, []); //componentDidMount equivalent with hooks, should fetch from the db once on load
 
   //product grid
   return (
@@ -39,10 +39,10 @@ const Products = (props) => {
                 {props.productList.map((record, index) => {
                   return (
                     <TableRow key={index}>
-                      <TableCell>{record.ItemName}</TableCell>
-                      <TableCell>{record.Price}</TableCell>
-                      <TableCell>{record.BrandName}</TableCell>
-                      <TableCell>{record.Retailer}</TableCell>
+                      <TableCell>{record.itemName}</TableCell>
+                      <TableCell>{record.price}</TableCell>
+                      <TableCell>{record.brandName}</TableCell>
+                      <TableCell>{record.retailer}</TableCell>
                     </TableRow>
                   );
                 })}
