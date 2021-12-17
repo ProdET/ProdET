@@ -32,7 +32,6 @@ namespace ProdET_BackEnd
             services.AddDbContext<ProductDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
 
-
             services.AddCors();
         }
 
