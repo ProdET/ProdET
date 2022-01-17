@@ -1,47 +1,23 @@
-using Microsoft.EntityFrameworkCore;
-using ProdET_BackEnd.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-var builder = WebApplication.CreateBuilder(args);
-
-#region Add Services
-// Add services to the container.
-builder.Services.AddControllers();
-
-builder.Services.AddDbContext<ProductDBContext>(options =>
-    //options.UseInMemoryDatabase("ProductList"));  
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")
-     //, b => b.MigrationsAssembly("ProdET_BackEnd.Migrations")
-     ));
-
-builder.Services.AddCors();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-#endregion
-#region Configuration
-var app = builder.Build();
-
-string baseUrl = "https://localhost:3000";
-app.UseCors(options =>
-options.WithOrigins(baseUrl)
-.AllowAnyHeader()
-.AllowAnyMethod());
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+namespace ProdET_BackEnd
 {
-    app.UseDeveloperExceptionPage();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
 
-    //    app.UseSwagger();
-    //    app.UseSwaggerUI();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-#endregion
-
-app.Run();

@@ -10,6 +10,7 @@
         public double Shipping { get; set; }
         public string? Retailer { get; set; }
         public string? Url { get; set; }
+        public int? EmissionScore { get; set; }
     }
 
     /*
