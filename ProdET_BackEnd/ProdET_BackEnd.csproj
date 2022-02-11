@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="WebScrape\**" />
+    <Content Remove="WebScrape\**" />
+    <EmbeddedResource Remove="WebScrape\**" />
+    <None Remove="WebScrape\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Abp.Web.Common" Version="7.0.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.38" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
@@ -25,10 +32,6 @@
     <PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="96.0.4664.4500" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="WebScrape\" />
   </ItemGroup>
 
 </Project>
